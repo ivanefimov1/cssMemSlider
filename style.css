@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #25282a;
+    color: white;
+}
+.slider {
+    width: 768px;
+    min-height: 500px;
+	margin: 100px auto;
+	position: relative;
+    overflow: hidden;
+}
+
+.slides {
+	background-color: black;
+    display: flex;
+    width: 400%;
+    height: 450px;
+}
+.slide {
+    width: 25%;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+.img{
+    width: 100%;
+    height: 100%;
+}
+.control {
+	position: absolute;
+    display: flex;
+    bottom: 0;
+    right: 0;
+    margin-top: 30px;
+}
+.bar{
+    padding: 7px;
+    margin: 5px;
+    border: 2px solid #71abff;
+    background-color: #71abff;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    transition: all 0.5;
+    -webkit-transition: all 0.5;
+    -moz-transition: all 0.5;
+    -ms-transition: all 0.5;
+    -o-transition: all 0.5;
+}
+.bar:hover{
+    background-color: #fff;
+    border: 2px solid white;
+}
+
+#r1:checked ~ .controls .dot:nth-of-type(1):hover,
+#r2:checked ~ .controls .dot:nth-of-type(2):hover,
+#r3:checked ~ .controls .dot:nth-of-type(3):hover,
+#r4:checked ~ .controls .dot:nth-of-type(4):hover,
+#r5:checked ~ .controls .dot:nth-of-type(5):hover {
+    border: 2px solid white;
+}
+#r1:checked ~ .controls .dot:nth-of-type(1),
+#r2:checked ~ .controls .dot:nth-of-type(2),
+#r3:checked ~ .controls .dot:nth-of-type(3),
+#r4:checked ~ .controls .dot:nth-of-type(4),    
+#r5:checked ~ .controls .dot:nth-of-type(5) {
+    border: 2px solid #71abff;
+    background-color: rgba(0,0,0,0);
+}
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+#r1:checked ~ .slides > .s1{  
+    margin-left: 0;
+}
+#r2:checked ~ .slides > .s1{
+    margin-left: -25%;
+}
+#r3:checked ~ .slides > .s1{
+    margin-left: -50%;
+}
+#r4:checked ~ .slides > .s1{
+    margin-left: -75%;
+}
+.text{
+    display: flex;
+    margin-top: 30px;
+}
